@@ -31,5 +31,5 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/login.html'); 
   });  
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}, http://localhost:5000`));
+const PORT = process.env.PORT || 2500;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}, http://localhost:2500`));

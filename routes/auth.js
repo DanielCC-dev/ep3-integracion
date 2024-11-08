@@ -11,7 +11,7 @@ router.post('/register', async (req, res) => {
   try {
     // Verifica si el usuario ya existe
     let user = await User.findOne({ email });
-    if (user) return res.status(400).json({ message: 'El usuario ya existe' });
+    if (user) return res.status(400).redirect('/register.html'); 
     
     // Encripta la contraseña
     const salt = await bcrypt.genSalt(10);
@@ -26,7 +26,8 @@ router.post('/register', async (req, res) => {
     });
 
     await user.save();
-    res.status(201).json({ message: 'Usuario creado exitosamente' });
+    // Redirigir a la página de login después del registro exitoso
+    res.redirect('/');
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error en el servidor' });
@@ -40,13 +41,14 @@ router.post('/login', async (req, res) => {
   try {
     // Busca el usuario por el correo electrónico
     const user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ message: 'Credenciales inválidas' });
+    if (!user) return res.status(400).redirect('/');
 
     // Compara la contraseña
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ message: 'Credenciales inválidas' });
+    if (!isMatch) return res.status(400).redirect('/');
 
-    res.status(200).json({ message: 'Inicio de sesión exitoso' });
+    // Redirigir después del inicio de sesión exitoso
+    res.redirect('/home');
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error en el servidor' });
