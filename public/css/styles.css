@@ -1,0 +1,108 @@
+/* Fondo y configuración básica */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1b2a; /* Fondo oscuro acorde a login */
+  color: #ffffff;
+}
+
+.container-flex {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.jumbotron {
+  background: #121a26; /* Fondo oscuro */
+  color: #ffffff;
+}
+
+.jumbotron .btn-primary {
+  background-color: #1abc9c;
+  border: none;
+}
+
+.jumbotron .btn-primary:hover {
+  background-color: #16a085;
+}
+
+/* Nueva Sección */
+.container.my-5 h2 {
+  color: #1abc9c; /* Verde de login */
+}
+
+.container.my-5 p {
+  color: #cccccc; /* Texto en gris claro */
+}
+
+/* Tarjetas */
+.card {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: #1abc9c;
+}
+
+.card-text {
+  color: #cccccc;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #1abc9c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #16a085;
+}
+
+/* Imagen en la sección "Sobre Nosotros" */
+.container.my-5 .img-fluid {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #0d1b2a; /* Mismo fondo oscuro */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Image */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Placeholder para input en formularios */
+.form-control::placeholder {
+  color: #cccccc; /* Placeholder claro */
+}

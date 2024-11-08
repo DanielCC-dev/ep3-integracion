@@ -1,0 +1,72 @@
+/* Estilos específicos para la página de login */
+body {
+    background: #0d1b2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background: rgba(17, 25, 40, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    color: #ffffff;
+  }
+  
+  .login-title {
+    color: #1abc9c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-control {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #1abc9c;
+  }
+  
+  .btn-login {
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+  
+  .btn-login:hover {
+    background-color: #16a085;
+  }
+  
+  .remember-me {
+    color: #ccc;
+  }
+  
+  .forgot-password {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    color: #16a085;
+    text-decoration: underline;
+  }
+
+  .form-control::placeholder {
+    color: #cccccc;
+  } 
