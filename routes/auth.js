@@ -41,11 +41,11 @@ router.post('/login', async (req, res) => {
   try {
     // Busca el usuario por el correo electrónico
     const user = await User.findOne({ email });
-    if (!user) return res.status(400).redirect('/');
+    if (!user) return res.status(400).redirect('/?error=invalid-email');
 
     // Compara la contraseña
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).redirect('/');
+    if (!isMatch) return res.status(400).redirect('/?error=invalid-password');
 
     // Redirigir después del inicio de sesión exitoso
     res.redirect('/home');
